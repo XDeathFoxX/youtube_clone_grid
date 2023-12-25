@@ -1,0 +1,27 @@
+@import url('./reset.css');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+body {
+    display: grid;
+    grid-template-rows: 3.5rem 64rem;
+    grid-template-columns: 13.625rem repeat(4,1fr);
+    width: 100vw;
+    grid-template-areas:
+    "search search search search search"
+    "navbar video video video video";
+}
+
+.searchBar {
+    grid-area: search;
+    background-color: rebeccapurple;
+}
+
+.navBar {
+    grid-area: navbar;
+    background-color: aqua;
+}
+
+.video {
+    grid-area: video;
+    background-color: blueviolet;
+}
