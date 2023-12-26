@@ -4,7 +4,7 @@
 body {
     display: grid;
     grid-template-rows: 3.5rem 60rem;
-    grid-template-columns: 13.625rem repeat(4,1fr);
+    grid-template-columns: 13.625rem 1fr;
     width: 100vw;
     grid-template-areas:
     "search search search search search"
@@ -20,23 +20,78 @@ body {
 
 .left {
     display: flex;
-    gap: 20px;
+    position: absolute;
+    left: 0;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 10px;
 }
 
-.center {
-    padding: 350px;
+.rigth {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+
+.myimage {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
 }
 
 .navBar {
     grid-area: navbar;
-    background-color: aqua;
 }
-
-/* .navBar img {
-    height: 100%;
-} */
 
 .videos {
     grid-area: videos;
-    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
+
+.video {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.videoimage {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.dadosvideo {
+    display: flex;
+}
+
+.dadosvideo img {
+    width: 2.625rem;
+    height: 2.625rem;
+}
+
+.dadosvideo span {
+    display: flex;
+    font-family: Roboto;
+    flex-direction: column;
+    white-space: pre-line;
+    font-size: 0.75rem;
+    margin-left: 2rem;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.views {
+    color: #515151;
+}
+
+
+/* .dadosvideo p {
+    display: flex;
+} */
